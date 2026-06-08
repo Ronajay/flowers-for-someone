@@ -9,9 +9,21 @@ title.style.gap = '0.5rem'
 
 for (let index = 0; index < text.length; index++) {
   if (text[index] !== ' ') {
-    title.innerHTML += `<span>${text[index]}</span>`
+    title.innerHTML += `
+      <span style="
+        color: #ff4fd8;
+        text-shadow:
+          0 0 5px #ff4fd8,
+          0 0 10px #ff4fd8,
+          0 0 20px #ff4fd8,
+          0 0 40px #ff00c8,
+          0 0 80px #ff00c8;
+        font-weight: bold;
+      ">
+        ${text[index]}
+      </span>`
   } else {
-    title.innerHTML += `<span style='width: 1rem'></span>`
+    title.innerHTML += `<span style="width: 1rem"></span>`
   }
 }
 
